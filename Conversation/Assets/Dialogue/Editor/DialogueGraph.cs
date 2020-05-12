@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor;
 using UnityEngine.UIElements;
+using UnityEditor.UIElements;
 
 public class DialogGraph : EditorWindow
 {
@@ -21,6 +22,13 @@ public class DialogGraph : EditorWindow
     //Like start method
     public void OnEnable()
     {
+        ConstructGraphView();
+        GenerateToolBar();
+
+    }
+
+    private void ConstructGraphView()
+    {
         _graphView = new DialogGraphView
         {
             name = "Dialogue Graph"
@@ -28,14 +36,25 @@ public class DialogGraph : EditorWindow
 
         _graphView.StretchToParentSize();
         rootVisualElement.Add(_graphView);
-
     }
 
+    private void GenerateToolBar()
+    {
+        var toolbar = new Toolbar();
+        var nodeCreateButton = new Button(() => {
+            _graphView.CreateNode("Dialogue Node");
+        });
+        nodeCreateButton.text = "Create node";
+        toolbar.Add(nodeCreateButton);
+        rootVisualElement.Add(toolbar);//Add to the window in unity
+
+    }
 
     //Like destroy method
     public void OnDisable()
     {
         rootVisualElement.Remove(_graphView);
     }
+
 
 }

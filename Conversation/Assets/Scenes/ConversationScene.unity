@@ -2585,7 +2585,7 @@ PrefabInstance:
     - target: {fileID: 5644187826230534173, guid: caeaad4b62231914d8a09b8254da17f7,
         type: 3}
       propertyPath: sentences.Array.data[0]
-      value: Hello Juan! Me Booba! You come in peace(1) or violence(2)?
+      value: Hello Juan! Me Booba! You come in violence(1) or peace(2)?
       objectReference: {fileID: 0}
     - target: {fileID: 5644187826230534173, guid: caeaad4b62231914d8a09b8254da17f7,
         type: 3}
@@ -2707,7 +2707,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1460887794
 RectTransform:
   m_ObjectHideFlags: 0

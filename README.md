@@ -56,6 +56,7 @@ OR we could have chosen 2 for peace so:
 
 If we choose 1 for rommates: 
 
+![Roomates](https://user-images.githubusercontent.com/33619352/81828073-0f949f80-9542-11ea-8dfb-1dc435c1e68d.gif)
 
 
 If we choose 2 for not roomates:

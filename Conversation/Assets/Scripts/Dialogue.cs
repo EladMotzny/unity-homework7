@@ -94,7 +94,7 @@ public class Dialogue : MonoBehaviour
         }
         else if (option1Count == 1 && option2Count ==1 && secondFirst == true)//roommate, hug
         {
-            sentences[index + 1] = peace[2];
+            sentences[index + 1] = peace[1];
             hug = true;
         }
         else if (option1Count == 2)//box

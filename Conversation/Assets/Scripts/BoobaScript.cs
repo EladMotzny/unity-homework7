@@ -19,24 +19,20 @@ public class BoobaScript : MonoBehaviour
         {
             StartCoroutine(HugRoutine());
             Dialogue.hug = false;
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);//reset scene
         }
         else if (Dialogue.box == true) {
             StartCoroutine(BoxRoutine());
             Dialogue.box = false;
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         else if (Dialogue.wave == true)
         {
             StartCoroutine(WaveRoutine());
             Dialogue.wave = false;
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         else if (Dialogue.surrender == true)
         {
             StartCoroutine(SurrenderRoutine());
             Dialogue.surrender = false;
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         
     }

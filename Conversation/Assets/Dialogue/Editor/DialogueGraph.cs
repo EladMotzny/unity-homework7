@@ -9,6 +9,7 @@ using UnityEditor.UIElements;
 public class DialogGraph : EditorWindow
 {
     private DialogGraphView _graphView;
+    private string _fileName = "New Narrative";
 
     [MenuItem("Graph/Dialogue Graph")]
 
@@ -41,6 +42,13 @@ public class DialogGraph : EditorWindow
     private void GenerateToolBar()
     {
         var toolbar = new Toolbar();
+
+        var fileNameTextField = new TextField("File Name:");
+        fileNameTextField.SetValueWithoutNotify(_fileName);
+        fileNameTextField.MarkDirtyRepaint();
+        fileNameTextField.RegisterValueChangedCallback(evt => _fileName = evt.newValue);
+
+
         var nodeCreateButton = new Button(() => {
             _graphView.CreateNode("Dialogue Node");
         });
